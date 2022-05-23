@@ -85,11 +85,11 @@ def checkout(skus):
     total += countF*10
     
     # offer for H
-    if countH > 10:
+    if countH > 9:
             total += ((countH//10)*80)
             countH = countH%10
     
-    if countH > 5:
+    if countH > 4:
         total += ((countH//5)*45) +  ((countH%5)*10)
     
     else:
@@ -146,3 +146,4 @@ def checkout(skus):
         total += 50*countV
     
     return total
+
