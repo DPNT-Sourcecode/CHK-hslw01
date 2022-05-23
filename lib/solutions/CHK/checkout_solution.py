@@ -52,5 +52,3 @@ def checkout(skus):
     total += countF*10
     
     return total
-
-print(checkout('FF'))
