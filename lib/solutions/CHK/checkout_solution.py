@@ -6,6 +6,7 @@ def checkout(skus):
     countA = 0
     countB = 0
     countE = 0
+    countF = 0
     total = 0
     
     for x in skus:
@@ -19,6 +20,8 @@ def checkout(skus):
             total += 15
         elif x == 'E':
             countE += 1
+        elif x == 'F':
+            countF += 1
         else:
             return -1
         
@@ -42,5 +45,12 @@ def checkout(skus):
     
     else:
         total += 30*countB
-        
+    
+    if countF > 2:
+        countF -= countF//3
+    
+    total += countF*10
+    
     return total
+
+print(checkout('FF'))
