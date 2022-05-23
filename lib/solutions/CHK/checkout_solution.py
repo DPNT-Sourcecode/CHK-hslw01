@@ -137,7 +137,7 @@ def checkout(skus):
     # offer for V
     if countV > 2:
             total += ((countV//3)*130)
-            countA = countA%3
+            countV = countV%3
     
     if countV > 1:
         total += ((countV//2)*90) +  ((countV%2)*50)
@@ -146,4 +146,5 @@ def checkout(skus):
         total += 50*countV
     
     return total
+
 
