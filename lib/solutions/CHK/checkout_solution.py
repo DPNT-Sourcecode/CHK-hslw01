@@ -5,6 +5,7 @@
 def checkout(skus):
     countA = 0
     countB = 0
+    countE = 0
     total = 0
     
     for x in skus:
@@ -16,9 +17,20 @@ def checkout(skus):
             total += 20
         elif x == 'D':
             total += 15
+        elif x == 'E':
+            countE += 1
         else:
             return -1
         
+    if countE > 1:
+        countB = max(0,countB-(countE)//2)
+    
+    total += countE*40
+    
+    if countA > 4:
+            total += ((countA//5)*200)
+            countA = countA%5
+    
     if countA > 2:
         total += ((countA//3)*130) +  ((countA%3)*50)
     
