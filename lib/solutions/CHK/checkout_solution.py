@@ -146,5 +146,3 @@ def checkout(skus):
         total += 50*countV
     
     return total
-
-
