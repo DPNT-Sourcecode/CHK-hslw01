@@ -52,7 +52,7 @@ from runner.user_input_action import get_user_input
          * You can use your own test framework.
          * You can change the file structure.
          * Anything really, provided that this file stays runnable.
- de
+ 
 """
 
 runner = QueueBasedImplementationRunnerBuilder()\
